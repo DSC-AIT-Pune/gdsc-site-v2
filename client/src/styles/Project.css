@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .project-card-containers {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +12,7 @@
   align-items: center;
   width: 75%;
 }
+
 .projectSubheading {
   /* width: 65%; */
   /* height: 50%; */
@@ -45,25 +47,122 @@
   width: 100%;
   font-size: 12px;
 }
+
 .projects-image {
   object-fit: cover;
   width: 100%;
   border-radius: 10px;
   height: 200px;
 }
+
 .Project-names {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+#dark label{
+color: white;
+}
+#dark .formContainer #inputCreatePost{
+background-color: #373737;
+}
+/* post page css */
+.createPostPage {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid rgb(200, 200, 201);
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  color: white;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: dodgerblue;
+}
+
+span2 {
+  color: red;
+}
+
+/* project css */
+.projecteee-cards{
+  width: 20%;
+  min-width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(68, 68, 68);
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+.projectee-title{
+  margin-top: 20px;
+  
+}
+#dark .projectee-title{
+  color: white;
+}
+.projectee-textContent{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#dark .projectee-textContent{
+  color: white;
+}
+.projectee-footer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#dark .projectee-footer{
+  color: white;
+}
 #dark .Project-names {
   color: white;
 }
+
 #dark .project-domains {
   color: white;
 }
+
 #dark .projects-status {
   color: white;
 }
+
 #dark .project-cards {
   background-color: #373737;
 }

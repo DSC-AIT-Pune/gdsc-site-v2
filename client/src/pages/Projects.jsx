@@ -1,4 +1,8 @@
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import "../styles/Project.css";
 import Banner from "../components/Banner";
 import Adventure from "../assets/teamwork.svg";
@@ -14,6 +18,22 @@ import project7 from "../assets/projects/project7.jpeg"
 import project8 from "../assets/projects/project8.png"
 
 function Projects() {
+  const initialValues = {
+    title: "",
+    postText: "",
+    username: "",
+  };
+  const onSubmit = (data) => {
+    console.log(data);
+    axios.post("http://localhost:3001/posts", data).then((Response) => {
+      console.log("it worked")
+    });
+  }
+  const validationSchema = Yup.object().shape({
+    title: Yup.string().required(),
+    postText: Yup.string().required(),
+    username: Yup.string().required().min(3).max(15),
+  })
   const [projects, setProjects] = React.useState([
     {
       imageUrl: project5,
@@ -87,8 +107,15 @@ function Projects() {
       domain: "Web Development",
       github: "https://github.com/The-Anton/special-learning-disablility-analyser",
     },
-    
+
   ]);
+  const [listOfPosts, setListOfPosts] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3001/posts").then((response) => {
+      console.log(response.data)
+      setListOfPosts(response.data);
+    })
+  }, [])
   return (
     <div className={"projectConatiner"}>
       <Banner
@@ -108,16 +135,70 @@ function Projects() {
               <a href={project.projectLink} target="_blank">
                 <img className="projects-image" src={project.imageUrl} alt="" />
               </a>
-                <p className="Project-names">{project.name}</p>
-                <div className="card-footers">
-                  <a className="project-domains" href={project.github} target="_blank">{project.domain}</a>
-                  <p className="projects-status">{project.status}</p>
-                </div>
+              <p className="Project-names">{project.name}</p>
+              <div className="card-footers">
+                <a className="project-domains" href={project.github} target="_blank">{project.domain}</a>
+                <p className="projects-status">{project.status}</p>
+              </div>
             </div>
           );
         })}
       </div>
-      
+      <div className="OurTeamHeadingmobile">
+        <span style={{ fontSize: "6vh", fontWeight: "bold" }}>{"Your suggestions"}</span>
+      </div>
+      <div className="createPostPage">
+        <Formik
+          initialValues={initialValues}
+          onSubmit={onSubmit}
+          validationSchema={validationSchema}
+        >
+          <Form className="formContainer">
+            <label>Project Name: </label>
+            <ErrorMessage name="title" component="span2" />
+            <Field
+              id="inputCreatePost"
+              name="title"
+              placeholder="(Ex. Project Name...)"
+            />
+            <label>Project Idea: </label>
+            <ErrorMessage name="postText" component="span2" />
+            <Field
+              id="inputCreatePost"
+              name="postText"
+              placeholder="(Ex. Project Summary...)"
+            />
+            <label>Username: </label>
+            <ErrorMessage name="username" component="span2" />
+            <Field
+              id="inputCreatePost"
+              name="username"
+              placeholder="(Ex. Ajay...)"
+            />
+            <button type="submit"> Create Post</button>
+          </Form>
+        </Formik>
+      </div>
+      <div className="OurTeamHeadingmobile">
+        <span style={{ fontSize: "7vh", fontWeight: "bold" }}>{"Project Ideas"}</span>
+      </div>
+      <div className="project-card-containers">
+        {listOfPosts.map((value, key) => {
+          return (
+            <div className="projecteee-cards">
+              <div className='projectee-title'>
+                Project Title: {value.title}
+              </div>
+              <div className='projectee-textContent'>
+                {value.postText}
+              </div>
+              <div className='projectee-footer'>
+                @{value.username}
+              </div>
+            </div>
+          )
+        })}
+      </div>
     </div>
   );
 }
