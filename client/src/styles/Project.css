@@ -1,0 +1,69 @@
+.projectConatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-card-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+.projectSubheading {
+  /* width: 65%; */
+  /* height: 50%; */
+  padding: 48px 16px;
+  color: #4285f4;
+  color: #f03d5f;
+  color: rgb(67, 66, 66);
+  color: grey;
+  font-size: 92px;
+  font-weight: bolder;
+  display: inline;
+}
+
+.project-cards {
+  width: 20%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(68, 68, 68);
+  box-shadow: 0px 0px 5px grey;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+
+.card-footers {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+}
+.projects-image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+}
+.Project-names {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#dark .Project-names {
+  color: white;
+}
+#dark .project-domains {
+  color: white;
+}
+#dark .projects-status {
+  color: white;
+}
+#dark .project-cards {
+  background-color: #373737;
+}

@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+  /* background-color: black; */
+  overflow-x: hidden;
+}
+#dark {
+  background-color: #292929;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+a:hover {
+  cursor: pointer;
+}
+/* .routeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+} */
+.programsConatiner {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.SpinnerBeforeLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+@media screen and (max-width: 400px) {
+  .globe-container {
+    height: 210px;
+  }
+  .globe-canvas {
+    height: 390px !important;
+    width: 390px !important;
+  }
+  canvas {
+    height: 390px !important;
+    width: 390px !important;
+  }
+}
+@media screen and (max-width: 500px) and (min-width: 401px) {
+  .globe-container {
+    height: 250px;
+  }
+  .globe-canvas {
+    height: 450px !important;
+    width: 450px !important;
+  }
+  canvas {
+    height: 450px !important;
+    width: 450px !important;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 501px) {
+  .globe-container {
+    height: 250px;
+  }
+  .globe-canvas {
+    height: 450px !important;
+    width: 550px !important;
+  }
+  canvas {
+    height: 550px !important;
+    width: 550px !important;
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 601px) {
+  .globe-container {
+    height: 350px;
+  }
+  .globe-canvas {
+    height: 450px !important;
+    width: 650px !important;
+  }
+  canvas {
+    height: 650px !important;
+    width: 650px !important;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 701px) {
+  .globe-container {
+    height: 350px;
+  }
+  .globe-canvas {
+    height: 500px !important;
+    width: 750px !important;
+  }
+  canvas {
+    height: 750px !important;
+    width: 750px !important;
+  }
+}
+@media screen and (max-width: 900px) and (min-width: 801px) {
+  .globe-container {
+    height: 350px;
+  }
+  .globe-canvas {
+    height: 500px !important;
+    width: 850px !important;
+  }
+  canvas {
+    height: 850px !important;
+    width: 850px !important;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 901px) {
+  .globe-container {
+    height: 350px;
+  }
+  .globe-canvas {
+    height: 500px !important;
+    width: 950px !important;
+  }
+  canvas {
+    height: 950px !important;
+    width: 950px !important;
+  }
+}

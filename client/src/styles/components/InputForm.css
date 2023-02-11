@@ -1,0 +1,140 @@
+.home-input-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* background-color: red; */
+    /* background-color: white; */
+}
+#dark .home-input-form{
+    /* background-color: #373737; */
+}
+
+.home-input-form-name {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid blue;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    /* width: 90%; */
+
+}
+#dark .home-input-form-name
+{
+    background: #4c4848;
+}
+.home-input-form-message {
+    height: 130px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid blue;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* width: 90%; */
+    max-width: 90%;
+}
+#dark .home-input-form-message{
+    background: #4c4848;
+}
+
+.home-bottom-input-form {
+    display: flex;
+    width:90%;
+
+}
+
+#dark ::placeholder
+{
+    color: white;
+}
+.input-form-image {
+    height: 171px;
+    width: 186px;
+    margin-left: 0px;
+    
+    margin-top: 30px;
+}
+
+.button-home-input-form {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: #4c4848;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* margin: 50px 0px 0px 100px; */
+    /* margin-left: 100px; */
+    margin-top: 100px;
+
+}
+
+.button-home-input-form:hover {
+    background-color: #4285f4 !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 480px) {
+
+    .home-input-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-input-form-name{
+        /* width: 250px; */
+        width: 80%;
+    }
+    .home-input-form-message{
+        width: 80%;
+    }
+    .button-home-input-form{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+    .home-input-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-input-form-name{
+        /* width: 250px; */
+        /* width: 80%; */
+        width: 400px;
+    }
+    .home-input-form-message{
+        /* width: 80%; */
+        width: 400px;
+    }
+    .button-home-input-form{
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .home-input-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-input-form-name{
+        /* width: 250px; */
+        /* width: 80%; */
+        width: 500px;
+    }
+    .home-input-form-message{
+        /* width: 80%; */
+        width: 500px;
+    }
+    .button-home-input-form{
+        margin-left: 10px;
+    }
+}

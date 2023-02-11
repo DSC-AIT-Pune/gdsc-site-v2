@@ -1,0 +1,154 @@
+.scheduleContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* background-color: red; */
+}
+.heading {
+  font-size: 2.625rem;
+  line-height: 65px;
+  text-align: center;
+  font-weight: bolder;
+  margin: 0.625rem;
+}
+.hrLine {
+  width: 75%;
+  height: 4px;
+  background: #9d9d9d;
+}
+.schedule {
+  width: 75%;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  /* justify-content: center; */
+  /* background: linear-gradient(90deg, #00c2ff 0%, #fa00ff 100.02%); */
+}
+.schedule::-webkit-scrollbar {
+  height: 2px;
+}
+.scheduleCard:nth-child(2n) {
+  /* background-color: red; */
+  width: 400px;
+  height: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  transform: rotateX(-180deg);
+}
+.scheduleCard:nth-child(2n) .upercard {
+  transform: rotateX(-180deg);
+  background-color: aqua;
+  background-color: whitesmoke;
+}
+
+.scheduleCard {
+  width: 400px;
+  height: 100%;
+  /* background-color: rgb(28, 143, 166); */
+  /* background: linear-gradient(
+    90deg,
+    #00c2ff 0%,
+    #fa00ff 50.01%,
+    #00c2ff 100.02%
+  );
+  background: linear-gradient(
+    90deg,
+    #00c2ff 0%,
+    #78f284 50.01%,
+    #0bb9ff 100.02%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 193, 7, 0.5) 0%,
+    #f6ba17 50.01%,
+    rgba(255, 193, 7, 0.5) 100.02%
+  ); */
+  background: linear-gradient(
+    90deg,
+    #263650 0%,
+    #2513ef 50.01%,
+    #263748 100.02%
+  );
+}
+.uperCard {
+  height: 50%;
+  width: 400px;
+  background-color: yellow;
+  background-color: whitesmoke;
+  -webkit-clip-path: polygon(
+    0% 95%,
+    5% 100%,
+    95% 100%,
+    100% 95%,
+    100% 0%,
+    0% 0%
+  );
+  clip-path: polygon(0% 95%, 5% 99%, 95% 99%, 100% 95%, 100% 0%, 0% 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lowerCard {
+  height: 50%;
+  width: 400px;
+  position: relative;
+  background-color: pink;
+  background-color: whitesmoke;
+  -webkit-clip-path: polygon(
+    0% 10%,
+    11% 1%,
+    87% 0%,
+    100% 11%,
+    100% 100%,
+    0% 99%
+  );
+  clip-path: polygon(0% 5%, 5% 1%, 95% 1%, 100% 5%, 100% 100%, 0% 100%);
+}
+.dateCard {
+  width: 75%;
+  /* min-width: 450px; */
+  /* min-width: fit-content; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.21);
+  padding: 20px 24px;
+  border-radius: 12px;
+  position: relative;
+}
+.dateCard h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.dateCard p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.eventDate {
+  position: absolute;
+  /* top: -30px; */
+  top: -25px;
+  left: 30px;
+  height: 40px;
+  width: fit-content;
+  background: #ffc107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .schedule {
+    width: 100%;
+  }
+}

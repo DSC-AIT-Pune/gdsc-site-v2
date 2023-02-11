@@ -1,0 +1,7 @@
+.toggle-btn{
+    position: fixed;
+    right: 0px;
+    z-index: 250;
+    display: flex;
+    top: 10px;
+}
